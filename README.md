@@ -3,8 +3,9 @@
 El sistema de encuestas es una aplicación web moderna diseñada para:
 
 ✅ Crear encuestas personalizadas.
+
 ✅ Compartir encuestas con usuarios registrados y no registrados.
-✅ Analizar resultados en tiempo real.
+
 ✅ Ofrecer una interfaz intuitiva y responsiva.
 
 🎯 ##Objetivos del Sistema
@@ -31,21 +32,8 @@ Base de datos: MongoDB con Mongoose.
 Autenticación: JWT (JSON Web Tokens).
 
 📁 ##Estructura del proyecto
-proyecto/
-├── frontend/
-│   ├── index.html
-│   ├── styles.css
-│   ├── script.js
-│   └── pages/
-│       ├── home.js
-│       ├── create-survey.js
-│       └── ...
-├── backend/
-│   ├── server.js
-│   ├── routes/
-│   ├── models/
-│   └── middleware/
-└── README.md
+![image](https://github.com/user-attachments/assets/193d18e4-9603-4b38-82b2-573a7a6a6356)
+
 
 🛠️##Implementación del Sistema
 
@@ -59,6 +47,7 @@ Respuesta y almacenamiento de resultados.
 Visualización detallada de estadísticas.
 
  ##Despliegue y Mantenimiento
+ clona el proyecto `https://github.com/sarahyM/e-actividad-4.3---Proyecto-Final.git`
 ⚙️ #Requisitos
 Node.js versión 14+
 MongoDB versión 4+
@@ -68,3 +57,4 @@ Configurar variables de entorno: PORT, MONGODB_URI, JWT_SECRET.
 Instalar dependencias: npm install.
 Construir el frontend: npm run build.
 Iniciar el servidor: npm start.
+![image](https://github.com/user-attachments/assets/322efc2d-4f94-4008-8b87-369ea5656b21)
