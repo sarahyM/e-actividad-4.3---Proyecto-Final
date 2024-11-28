@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Encuestas</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="logo.png" alt="logo">
+        <ul>
+          <li><a href="#" id="home">Inicio</a></li>
+          <li><a href="#" id="all-surveys">Todas las Encuestas</a></li>
+          <li><a href="#" id="create-survey">Crear Encuesta</a></li>
+          <li><a href="#" id="my-surveys">Mis Encuestas</a></li>
+          <li><a href="#" id="login">Iniciar Sesión</a></li>
+          <li><a href="#" id="register">Registrarse</a></li>
+          <li><a href="#" id="logout">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+      <div id="userName" class="user-name"></div>
+    </header>
+
+    <main id="content">
+      <!-- El contenido dinámico se cargará aquí -->
+      <!-- Dentro del <div id="content"> -->
+      <div id="all-surveys" style="display: none">
+        <h2>Todas las Encuestas</h2>
+        <input
+          type="text"
+          id="searchAllSurveys"
+          placeholder="Buscar encuestas..."
+        />
+        <div id="allSurveysList"></div>
+      </div>
+
+      <div id="answer-survey" style="display: none">
+        <h2 id="surveyTitle"></h2>
+        <form id="answerSurveyForm">
+          <div id="surveyQuestions"></div>
+          <button type="submit">Enviar Respuestas</button>
+        </form>
+        <div id="answerMessage"></div>
+      </div>
+    </main>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col logo">
+        <img src="./Capa 1.png" alt="Logo de la Universidad">
+      </div>
+            <div class="col">
+        <ul>
+          <li><strong>Universidad Valle del Momboy</strong></li>
+          <li><strong>Facultad:</strong> Ingeniería de Computación</li>
+          <li><strong>Profesor:</strong> Yerson González</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Integrantes</h3>
+        <ul>
+          <li><strong>Nombre:</strong> Sarahy Ocanto González</li>
+          <li><strong>Cédula:</strong> 30.140.127</li>
+          <li><strong>Nombre:</strong> Norlys Castañeda Hernández</li>
+          <li><strong>Cédula:</strong> 20.597.586 </li>
+          <li><strong>Nombre:</strong> María Molina Zambrano</li>
+          <li><strong>Cédula:</strong> 27.229.410</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+    <script src="/script.js" type="module"></script>
+  </body>
+</html>
