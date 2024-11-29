@@ -8,53 +8,65 @@ El sistema de encuestas es una aplicación web moderna diseñada para:
 
 ✅ Ofrecer una interfaz intuitiva y responsiva.
 
+##Prototipo Frima 
+![image](https://github.com/user-attachments/assets/1f73aaa7-4b68-4743-af86-8912c7fe55ce)
+
+`https://www.figma.com/proto/vyWNnSbplPJKQStGGCUtIf/Untitled?node-id=2-2&node-type=canvas&t=mMvs6fYt1qEsS2yP-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1`
+
 🎯 ##Objetivos del Sistema
-Facilitar la creación y gestión de encuestas.
-Proporcionar un flujo de datos seguro y eficiente.
-Permitir la visualización de resultados con análisis en tiempo real.
+1. Facilitar la creación y gestión de encuestas.
+2. Proporcionar un flujo de datos seguro y eficiente.
+3. Permitir la visualización de resultados con análisis en tiempo real.
 
 🏗️ ##Arquitectura del Sistema
-El sistema utiliza una arquitectura de tres capas:
+#El sistema utiliza una arquitectura de tres capas:
 
-Frontend: HTML, CSS, JavaScript puro.
-Backend: Node.js con Express.
-Base de datos: MongoDB para almacenamiento persistente.
-🔍 Componentes principales
-Cliente: Interfaz de usuario.
-Servidor Web: Lógica de negocio y manejo de solicitudes HTTP.
-Middleware de Autenticación: Protección de rutas sensibles.
-Controladores y Modelos: Gestión de datos y operaciones.
+1. Frontend: HTML, CSS, JavaScript puro.
+2. Backend: Node.js con Express.
+3. Base de datos: MongoDB para almacenamiento persistente.
+   
+🔍 ##Componentes principales
+1. Cliente: Interfaz de usuario.
+2. Servidor Web: Lógica de negocio y manejo de solicitudes HTTP.
+3. Middleware de Autenticación: Protección de rutas sensibles.
+4. Controladores y Modelos: Gestión de datos y operaciones.
 
 💻 ##Tecnologías utilizadas
-Interfaz: HTML5, CSS3, JavaScript (ES6+).
-Backend: Node.js con Express.
-Base de datos: MongoDB con Mongoose.
-Autenticación: JWT (JSON Web Tokens).
+1. Interfaz: HTML5, CSS3, JavaScript (ES6+).
+2. Backend: Node.js con Express.
+3. Base de datos: MongoDB con Mongoose.
+4. Autenticación: JWT (JSON Web Tokens).
 
 📁 ##Estructura del proyecto
+
 ![image](https://github.com/user-attachments/assets/193d18e4-9603-4b38-82b2-573a7a6a6356)
 
 
 🛠️##Implementación del Sistema
 
-🛡️#Seguridad y Autenticación
-Registro e inicio de sesión con validación.
-Contraseñas hasheadas con bcrypt.
-Rutas protegidas con JWT.
-📊 #Funcionalidades Clave
-Creación y obtención de encuestas.
-Respuesta y almacenamiento de resultados.
-Visualización detallada de estadísticas.
+1. 🛡️#Seguridad y Autenticación
+- Registro e inicio de sesión con validación.
+- Contraseñas hasheadas con bcrypt.
+- Rutas protegidas con JWT.
+2. 📊 #Funcionalidades Clave
+- Creación y obtención de encuestas.
+- Respuesta y almacenamiento de resultados.
+- Visualización detallada de estadísticas.
 
  ##Despliegue y Mantenimiento
- clona el proyecto `https://github.com/sarahyM/e-actividad-4.3---Proyecto-Final.git`
+-  clona el proyecto `https://github.com/sarahyM/e-actividad-4.3---Proyecto-Final.git`
+-  entras a la carpeta con cd 
+  
 ⚙️ #Requisitos
-Node.js versión 14+
-MongoDB versión 4+
-Navegador moderno (Chrome, Firefox, Edge).
+- Node.js 
+- MongoDB 
+- Navegador moderno (Chrome, Firefox, Edge).
+  
 🛠️ #Pasos para Desplegar
-Configurar variables de entorno: PORT, MONGODB_URI, JWT_SECRET.
-Instalar dependencias: npm install.
-Construir el frontend: npm run build.
-Iniciar el servidor: npm start.
+- Clona el proyecto `https://github.com/sarahyM/e-actividad-4.3---Proyecto-Final.git`
+- Entras a la carpeta con cd 
+- Configurar variables de entorno: PORT, MONGODB_URI, JWT_SECRET.
+- Instalar dependencias: npm install.
+- Iniciar el servidor: node backend/server.js
+  
 ![image](https://github.com/user-attachments/assets/322efc2d-4f94-4008-8b87-369ea5656b21)
