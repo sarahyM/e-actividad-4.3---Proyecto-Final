@@ -9,7 +9,7 @@ const pageRoutes = require("./routes/pages");
 
 const app = express();
 
-// Middleware
+// Middleware.
 app.use(
   cors({
     origin: "*",
@@ -19,7 +19,7 @@ app.use(
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../frontend")));
 
-// Conexión a la base de datos con manejo de errores
+// Conexión a la base de datos con manejo de errores.
 mongoose
   .connect("mongodb://127.0.0.1:27017/survey_app", {
     useNewUrlParser: true,
@@ -33,7 +33,7 @@ mongoose
     process.exit(1); // Terminar la aplicación si no se puede conectar a la BD
   });
 
-// Middleware para logging de solicitudes
+// Middleware para logging de solicitudes.
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.path}`);
   next();
@@ -44,7 +44,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/surveys", surveyRoutes);
 app.use("/api", pageRoutes);
 
-// Manejo de errores global
+// Manejo de errores global.
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({
@@ -54,7 +54,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Ruta catch-all para el frontend
+// Ruta catch-all para el frontend.
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/index.html"));
 });
