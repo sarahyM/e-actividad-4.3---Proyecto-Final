@@ -1,4 +1,4 @@
-// Definir loadPage fuera del evento DOMContentLoaded
+// Definir loadPage fuera del evento DOMContentLoaded.
 async function loadPage(page, params = {}) {
   const content = document.getElementById("content");
   content.innerHTML = '<div class="loader"></div>';
@@ -22,7 +22,7 @@ async function loadPage(page, params = {}) {
   }
 }
 
-// Función para mostrar mensajes
+// Función para mostrar mensajes.
 function showMessage(elementId, message, isError = false) {
   const messageElement = document.getElementById(elementId);
   if (messageElement) {
@@ -32,7 +32,7 @@ function showMessage(elementId, message, isError = false) {
   }
 }
 
-// Función para actualizar la navegación
+// Función para actualizar la navegación.
 function updateNavigation(userName = null) {
   const loginLink = document.getElementById("login");
   const registerLink = document.getElementById("register");
