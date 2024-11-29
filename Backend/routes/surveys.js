@@ -17,7 +17,7 @@ router.post("/create-survey", auth, async (req, res) => {
     res.status(201).json(newSurvey);
   } catch (err) {
     console.error(err.message);
-    res.status(500).json({ message: "Error del servidor" });
+    res.status(500).send("Error del servidor");
   }
 });
 

@@ -1,6 +1,6 @@
+const jwt = require("jsonwebtoken");
 const express = require("express");
 const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
 const User = require("../models/user");
 
 const router = express.Router();
@@ -94,18 +94,23 @@ router.post("/login", async (req, res) => {
       },
     };
 
-    jwt.sign(payload, "tu_secreto_jwt", { expiresIn: "24h" }, (err, token) => {
-      if (err) throw err;
-      res.json({
-        success: true,
-        token,
-        user: {
-          id: user.id,
-          name: user.name,
-          email: user.email,
-        },
-      });
-    });
+    jwt.sign(
+      payload,
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" },
+      (err, token) => {
+        if (err) throw err;
+        res.json({
+          success: true,
+          token,
+          user: {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+          },
+        });
+      }
+    );
   } catch (err) {
     console.error(err.message);
     res.status(500).json({

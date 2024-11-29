@@ -74,37 +74,37 @@ function logout() {
 async function handleForms(e) {
   if (e.target.matches("#loginForm")) {
     e.preventDefault();
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const form = event.target;
+    const formData = new FormData(form);
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/login", {
+      const response = await fetch("/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({
+          email: formData.get("email"),
+          password: formData.get("password"),
+        }),
       });
 
       const data = await response.json();
 
-      if (response.ok) {
+      if (data.success) {
         localStorage.setItem("token", data.token);
         localStorage.setItem("userName", data.user.name);
-        showMessage("loginMessage", "Inicio de sesión exitoso");
-        updateNavigation(data.user.name);
-        setTimeout(() => loadPage("home"), 1000);
+        showMessage("Inicio de sesión exitoso. ¡Bienvenido!", "success");
+        updateNavigation();
+        loadPage("home");
       } else {
-        showMessage(
-          "loginMessage",
-          data.msg || "Error al iniciar sesión",
-          true
-        );
+        showMessage(data.message || "Error en el inicio de sesión", "error");
       }
     } catch (error) {
-      showMessage("loginMessage", "Error de conexión", true);
+      showMessage("Error en el inicio de sesión", "error");
     }
   }
+
 
   if (e.target.matches("#registerForm")) {
     e.preventDefault();
