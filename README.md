@@ -53,9 +53,6 @@ El sistema de encuestas es una aplicación web moderna diseñada para:
 - Respuesta y almacenamiento de resultados.
 - Visualización detallada de estadísticas.
 
- ##Despliegue y Mantenimiento
--  clona el proyecto `https://github.com/sarahyM/e-actividad-4.3---Proyecto-Final.git`
--  entras a la carpeta con cd 
   
 ⚙️ #Requisitos
 - Node.js 
